@@ -1,5 +1,6 @@
 package com.example.coursemanagement.activity;
 
+import com.a.a.in;
 import com.example.coursemanagement.R;
 import com.example.coursemanagement.R.id;
 import com.example.coursemanagement.R.layout;
@@ -51,8 +52,9 @@ public class MainActivity extends Activity {
         btDisplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Display", Toast.LENGTH_SHORT).show();
-                
+                //Toast.makeText(getApplicationContext(), "Display", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,DisplayActivity.class);
+                startActivity(intent);
             }
         });
     }
