@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 public class DisplayActivity extends Activity {
 	private ListView listView;
+	private TextView text_grade,text_major,text_number,text_coursename,text_coursetype,text_credit,text_period,text_testperiod,text_operateperiod;
+	
 	private static final String APP_ID = "e4f8d1e1ba3b0ff995032e07e0b6a9cd";
 
 	@Override
@@ -115,6 +117,7 @@ public class DisplayActivity extends Activity {
 					.getItemAtPosition(position);
 			String personid = data.get("coursename").toString();
 			Toast.makeText(getApplicationContext(), personid, 1).show();
+			text_grade=(TextView)findViewById(R.id.id_text_grade).setText(personid);
 		}
 	}
 
