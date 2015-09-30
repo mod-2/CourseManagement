@@ -18,6 +18,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -35,7 +36,9 @@ public class DisplayActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.display_layout);
+		
 		Bmob.initialize(getApplicationContext(), APP_ID);
 		listView = (ListView) findViewById(R.id.listView);
 		/*
@@ -129,6 +132,7 @@ public class DisplayActivity extends Activity {
 			intent.putExtra("credit", data.get("credit").toString());
 			intent.putExtra("period", data.get("period").toString());
 			intent.putExtra("testperiod", data.get("testperiod").toString());
+			intent.putExtra("operateperiod", data.get("operateperiod").toString());
 			startActivity(intent);
 			
 			

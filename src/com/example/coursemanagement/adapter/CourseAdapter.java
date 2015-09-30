@@ -1,4 +1,8 @@
-package com.example.coursemanagement;
+package com.example.coursemanagement.adapter;
+
+import com.example.coursemanagement.R;
+import com.example.coursemanagement.R.id;
+import com.example.coursemanagement.R.layout;
 
 import android.content.Context;
 import android.view.LayoutInflater;

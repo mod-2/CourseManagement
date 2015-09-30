@@ -5,6 +5,7 @@ import com.example.coursemanagement.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.TextView;
 
 public class ShowDetail extends Activity {
@@ -36,28 +37,65 @@ public class ShowDetail extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.info_layout);
+		
 		Intent intent = this.getIntent(); 
 		//
 		text_coursename = (TextView) this.findViewById(R.id.id_text_coursename);
-		text_coursename.setText(intent.getStringExtra("coursename"));
+		if(!intent.getStringExtra("coursename").equals("")){
+			text_coursename.setText(intent.getStringExtra("coursename"));
+		} else {
+			text_coursename.setText("Пе");
+		}
 		//
 		text_credit = (TextView) this.findViewById(R.id.id_text_credit);
-		text_credit.setText(intent.getStringExtra("credit"));
+		if(!intent.getStringExtra("credit").equals("")){
+			text_credit.setText(intent.getStringExtra("credit"));
+		} else {
+			text_credit.setText("Пе");
+		}
 		//
 		text_grade = (TextView) this.findViewById(R.id.id_text_grade);
-		text_grade.setText(intent.getStringExtra("grade"));
+		if(!intent.getStringExtra("grade").equals("")){
+			text_grade.setText(intent.getStringExtra("grade"));
+		} else {
+			text_grade.setText("Пе");
+		}
 		//
 		text_number = (TextView) this.findViewById(R.id.id_text_number);
-		text_number.setText(intent.getStringExtra("number"));
+		if(!intent.getStringExtra("number").equals("")){
+			text_number.setText(intent.getStringExtra("number"));
+		} else {
+			text_number.setText("Пе");
+		}
 		//
 		text_operateperiod = (TextView) this.findViewById(R.id.id_text_operateperiod);
-		text_operateperiod.setText(intent.getStringExtra("operateperiod"));
+		if(!intent.getStringExtra("operateperiod").equals("")){
+			text_operateperiod.setText(intent.getStringExtra("operateperiod"));
+		} else {
+			text_operateperiod.setText("Пе");
+		}
 		//
 		text_period = (TextView) this.findViewById(R.id.id_text_period);
-		text_period.setText(intent.getStringExtra("period"));
+		if(!intent.getStringExtra("period").equals("")){
+			text_period.setText(intent.getStringExtra("period"));
+		} else {
+			text_period.setText("Пе");
+		}
 		//
 		text_testperiod = (TextView) this.findViewById(R.id.id_text_testperiod);
-		text_testperiod.setText(intent.getStringExtra("testperiod"));
+		if(!intent.getStringExtra("testperiod").equals("")){
+			text_testperiod.setText(intent.getStringExtra("testperiod"));
+		} else {
+			text_testperiod.setText("Пе");
+		}
+		text_coursetype = (TextView) this.findViewById(R.id.id_text_coursetype);
+		if(!intent.getStringExtra("coursetype").equals("")){
+			text_coursetype.setText(intent.getStringExtra("coursetype"));
+		} else {
+			text_coursetype.setText("Пе");
+		}
+		
 	}
 }
